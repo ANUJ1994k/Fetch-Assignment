@@ -1,5 +1,12 @@
 
-
+//Selecting button for creating click event on it.
+let button=document.querySelector("button");
+button.addEventListener("click" ,function(){
+  displayData(data);
+})
+button.style.backgroundColor="teal";
+button.style.color="white";
+button.style.border="none";
 
 let container = document.getElementById("container");
 
@@ -13,7 +20,6 @@ fetch("https://reqres.in/api/users") //fetch is a promise and promises takes tim
   .then(function (res) {
     data = res.data;
     console.log("data:", data);
-    displayData(data);
   });
 
 function displayData(data) {
